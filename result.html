@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Verification Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Verification Result</h1>
+        <p class="score">Prediction Score: {{ score }}</p>
+        {% if score > 0.5 %}
+            <p class="result success">✅ Likely the same person</p>
+        {% else %}
+            <p class="result fail">❌ Likely different person (Forgery)</p>
+        {% endif %}
+        <a href="/" class="back-btn">Go Back</a>
+    </div>
+</body>
+</html>

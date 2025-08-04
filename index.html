@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Signature Verification</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Signature Forgery Detection</h1>
+        <form method="POST" action="/verify" enctype="multipart/form-data">
+            <div class="file-input">
+                <label for="image1">Signature 1:</label>
+                <input type="file" id="image1" name="image1" accept="image/*" required>
+            </div>
+            <div class="file-input">
+                <label for="image2">Signature 2:</label>
+                <input type="file" id="image2" name="image2" accept="image/*" required>
+            </div>
+            <button type="submit">Verify</button>
+        </form>
+    </div>
+</body>
+</html>
